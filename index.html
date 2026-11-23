@@ -9,7 +9,9 @@
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="bradlantic">
   <meta property="og:description" content="Daily GTA 6 clips and gaming moments.">
-  <meta property="og:image" content="assets/mark-official-384.png">
+  <meta property="og:image" content="assets/og-clipping-packs.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bradlantic.github.io/">
   <link rel="canonical" href="https://bradlantic.github.io/">
@@ -17,6 +19,7 @@
   <link rel="preload" href="assets/fonts/Anton-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/BebasNeue-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/mark-official-384.webp" as="image" type="image/webp">
+  <link rel="preload" href="assets/hero_9x16_bg.webp" as="image" type="image/webp">
   <style>
     @font-face {
       font-family: Anton;
@@ -46,8 +49,7 @@
       color: var(--chrome);
       font-family: system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
-      background:
-        linear-gradient(180deg, #452767 0%, #6B2B6C 38%, #E0407B 78%, #F06A90 100%);
+      background: #452767;
     }
     .sky {
       position: fixed;
@@ -56,52 +58,50 @@
       pointer-events: none;
       overflow: hidden;
     }
-    .sky .topo {
+    .sky .hero {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.95;
+      object-position: center top;
     }
-    .sky .palms {
+    .sky .veil {
       position: absolute;
-      right: -6%;
-      bottom: -2%;
-      width: min(92vw, 28rem);
-      height: auto;
-      filter: drop-shadow(0 -8px 18px rgba(69, 39, 103, 0.25));
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(69, 39, 103, 0.22) 0%, rgba(69, 39, 103, 0.04) 36%, rgba(10, 10, 12, 0.38) 100%);
     }
     .page {
       position: relative;
       z-index: 1;
       width: min(26.5rem, calc(100% - 2rem));
       margin: 0 auto;
-      padding: 2.1rem 0 3.5rem;
+      padding: 1.7rem 0 3.5rem;
       padding-bottom: max(3.5rem, env(safe-area-inset-bottom));
     }
     header { text-align: center; }
     .visually-hidden { position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0); }
     .mark {
-      width: 7.25rem;
+      width: 5.35rem;
       height: auto;
       display: block;
-      margin: 0 auto 0.7rem;
+      margin: 0 auto 0.35rem;
       filter: drop-shadow(0 10px 22px rgba(10, 10, 12, 0.45));
     }
     .brand {
       margin: 0;
       font-family: Anton, system-ui, sans-serif;
       font-weight: 400;
-      font-size: clamp(2.35rem, 11vw, 3.15rem);
+      font-size: clamp(2.15rem, 10.2vw, 2.9rem);
       letter-spacing: 0.06em;
       line-height: 0.95;
       text-transform: uppercase;
       color: #fff;
-      text-shadow: 0 2px 0 rgba(10, 10, 12, 0.28), 0 8px 24px rgba(69, 39, 103, 0.45);
+      text-shadow: 0 2px 0 rgba(10, 10, 12, 0.45), 0 8px 28px rgba(10, 10, 12, 0.55);
     }
     .tagline {
-      margin: 0.55rem 0 0;
+      margin: 0.3rem 0 0;
       font-size: 0.98rem;
       font-weight: 500;
       letter-spacing: 0.01em;
@@ -113,7 +113,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
-      margin-top: 1.7rem;
+      margin-top: 1.15rem;
     }
     a.btn {
       display: flex;
@@ -165,8 +165,11 @@
 </head>
 <body>
   <div class="sky" aria-hidden="true">
-    <img class="topo" src="assets/topo.svg" alt="">
-    <img class="palms" src="assets/palms.svg" alt="">
+    <picture>
+      <source srcset="assets/hero_9x16_bg.webp" type="image/webp">
+      <img class="hero" src="assets/hero_9x16_bg.jpg" alt="" width="1080" height="1920">
+    </picture>
+    <div class="veil"></div>
   </div>
   <main class="page">
     <header>
