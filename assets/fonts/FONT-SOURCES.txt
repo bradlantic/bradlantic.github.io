@@ -1,0 +1,4 @@
+Anton Regular and Bebas Neue Regular are licensed under the SIL Open Font License 1.1.
+Source: Google Fonts local copies on this machine.
+Outfit Variable remains licensed under the SIL Open Font License 1.1 (see OFL.txt).
+No Pricedown or other trademarked game fonts are used.
